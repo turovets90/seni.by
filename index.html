@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="home">
+<html>
   <head>
     <title>Главная</title>
     <meta charset="utf-8"/>
@@ -10,56 +10,150 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="h_row">
-          <div class="h_left">
-            <div class="logo"><a href="#"><img src="img/logo.svg"/></a></div>
-          </div>
-          <div class="h_right">
-            <div class="main_menu">
-              <ul class="nav">
-                <li class="active"><a href="#">Главная</a>
-                </li>
-                <li><a href="#">Подарки</a>
-                </li>
-                <li><a href="#">Каталог продукции</a>
-                  <div class="arrow"></div>
-                  <ul class="sub_menu">
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 2</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Правила клуба</a>
-                </li>
-                <li><a href="#">Новости</a>
-                </li>
-                <li><a href="#">Каталог сиделок</a>
-                </li>
-              </ul>
+    <div class="wrapper">
+      <header>
+        <div class="container">
+          <div class="h_row">
+            <div class="h_left">
+              <div class="logo"><a href="#"><img src="img/logo.svg"/></a></div>
             </div>
-            <ul class="social_menu">
-              <li><a href="#"><img src="img/s_1.svg"/></a></li>
-              <li><a href="#"><img src="img/s_2.svg"/></a></li>
-              <li><a href="#"><img src="img/s_3.svg"/></a></li>
-              <li><a href="#"><img src="img/s_4.svg"/></a></li>
-            </ul>
-            <div class="personal_box"><a class="btn_default personal_link" href="#"><span>Личный кабинет</span><i class="bi bi-person-circle"></i></a></div>
-            <div class="mm_btn">
-              <button class="hamburger"><span></span><span></span><span></span></button>
+            <div class="h_right">
+              <div class="main_menu">
+                <ul class="nav">
+                  <li class="active"><a href="#">Главная</a>
+                  </li>
+                  <li><a href="#">Подарки</a>
+                  </li>
+                  <li><a href="#">Каталог продукции</a>
+                    <div class="arrow"></div>
+                    <ul class="sub_menu">
+                      <li><a href="#">Link 2</a></li>
+                      <li><a href="#">Link 2</a></li>
+                      <li><a href="#">Link 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Правила клуба</a>
+                  </li>
+                  <li><a href="#">Новости</a>
+                  </li>
+                  <li><a href="#">Каталог сиделок</a>
+                  </li>
+                </ul>
+              </div>
+              <ul class="social_menu">
+                <li><a href="#"><img class="icon" src="img/s_1.svg"/></a></li>
+                <li><a href="#"><img class="icon" src="img/s_2.svg"/></a></li>
+                <li><a href="#"><img class="icon" src="img/s_3.svg"/></a></li>
+                <li><a href="#"><img class="icon" src="img/s_4.svg"/></a></li>
+              </ul>
+              <div class="personal_box"><a class="btn_default personal_link" href="#"><span>Личный кабинет</span><i class="bi bi-person-circle"></i></a></div>
+              <div class="mm_btn">
+                <button class="hamburger"><span></span><span></span><span></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="main_slider">
+        <div class="main_slider_item" style="background-image:url(img/banner19201.png)">
+          <div class="container">
+            <div class="main_slider_content">
+              <div class="title">КЛУБ SENI</div>
+              <div class="sub_title">Обменивайте покупки на подарки от Seni!</div><a class="btn_default btn_blue" href="#">Узнать подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="main_slider_item" style="background-image:url(img/banner19201.png)">
+          <div class="container">
+            <div class="main_slider_content">
+              <div class="title">КЛУБ SENI</div>
+              <div class="sub_title">Обменивайте покупки на подарки от Seni!</div><a class="btn_default btn_blue" href="#">Узнать подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="main_slider_item" style="background-image:url(img/banner19201.png)">
+          <div class="container">
+            <div class="main_slider_content">
+              <div class="title">КЛУБ SENI</div>
+              <div class="sub_title">Обменивайте покупки на подарки от Seni!</div><a class="btn_default btn_blue" href="#">Узнать подробнее</a>
             </div>
           </div>
         </div>
       </div>
-    </header>
-    <!--include inc/index/content.pug-->
-    <!--include inc/footer.pug-->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/slick.js"></script>
-    <script src="js/main.js"></script>
+      <section class="grey_light">
+        <div class="container">
+          <div class="h2 text-center">Преимущества от участия в КЛУБЕ SENI</div>
+          <div class="row pr_row">
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="pr_item">
+                <div>
+                  <picture><img src="img/pr_1.svg"/></picture>
+                  <div class="text">Возможность обмена собранных баллов на подарки</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="pr_item">
+                <div>
+                  <picture><img src="img/pr_2.svg"/></picture>
+                  <div class="text">Бесплатный справочник пациента для каждого клиента</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="pr_item">
+                <div>
+                  <picture><img src="img/pr_3.svg"/></picture>
+                  <div class="text">Бесплатные информационные и учебные материалы</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="pr_item">
+                <div>
+                  <picture><img src="img/pr_4.svg"/></picture>
+                  <div class="text">Участие в специальных рекламных акциях</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="seo_text">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 d-none d-md-flex align-items-center"><img class="b_radius" src="img/old-lady.png"/></div>
+            <div class="col-12 col-md-6 d-flex align-items-center">
+              <div class="desc">
+                <div class="h2">О клубе SENI</div>
+                <p>С 2007 года на территории Республики Беларусь действует призовая программа КЛУБ SENI.  Механизм действия очень прост: вы собираете штрих-коды с упаковок изделий ТМ SENI, каждому из которых присваиваются баллы, и обмениваете их на подарки из каталога клуба.</p>
+                <p>В бонусной программе участвует продукция ТМ SENI, реализуемая на территории Республики Беларусь, приобретенная в любой торговой точке Республики Беларусь: аптеки, торговые сети, рынки, павильоны и т.д.</p>
+                <p>Стать членом клуба очень просто. Следует заполнить анкету, и отправить ее по электронной почте нажав клавишу «Отправить». В течение двух недель Вы получаете Клубную Карту SENI с индивидуальным номером и все информационные материалы. Отправка осуществляется почтой Республики Беларусь.</p>
+                <p>Для получения подарка, штрих-коды, совместно с «Бланком заказа», Вы присылаете нам по почте по адресу: 220131, г. Минск, ул. Сосновый бор, д. 2, пом. 2.</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex d-md-none align-items-center"><img class="b_radius" src="img/old-lady.png"/></div>
+          </div>
+        </div>
+      </section>
+      <section class="main_membership">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6"><img class="m_logo" src="img/logo-simple1.svg"/>
+              <div class="h2">Стать членом КЛУБА SENI</div>
+              <div class="text">Механизм действия очень прост: вы собираете штрих-коды с упаковок изделий ТМ SENI, каждому из которых присваиваются баллы, и обмениваете их на подарки из каталога КЛУБА!</div><a class="btn_default" href="#">Зарегистрироваться</a>
+            </div>
+            <div class="col-12 col-md-6"><img src="img/image1.png"/></div>
+          </div>
+        </div>
+      </section>
+      <!--include inc/footer.pug-->
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/slick.js"></script>
+      <script src="js/main.js"></script>
+    </div>
   </body>
 </html>

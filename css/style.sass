@@ -99,13 +99,6 @@
   -o-transition: $transition_default
 
 
-//@font-face
-  font-family: 'Comfortaa'
-  src: url('../fonts/Comfortaa.eot')
-  src: local('Comfortaa'), url('../fonts/Comfortaa.eot?#iefix') format('embedded-opentype'), url('../fonts/Comfortaa.woff') format('woff'), url('../fonts/Comfortaa.ttf') format('truetype')
-  font-weight: normal
-  font-style: normal
-//$font: 'Comfortaa'
 
 @font-face
   font-family: "bootstrap-icons"
@@ -120,17 +113,16 @@
   font-style: normal
 $font: 'Comfortaa Bold'
 
-//@font-face
-  font-family: 'Comfortaa Light'
-  src: url('../fonts/Comfortaa-Light.eot')
-  src: local('Comfortaa Light'), local('Comfortaa-Light'), url('../fonts/Comfortaa-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Comfortaa-Light.woff') format('woff'), url('../fonts/Comfortaa-Light.ttf') format('truetype')
-  font-weight: 300
+
+
+@font-face
+  font-family: 'Source Sans Pro'
+  src: url('../fonts/SourceSansPro-Regular.eot')
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url('../fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/SourceSansPro-Regular.woff') format('woff'), url('../fonts/SourceSansPro-Regular.ttf') format('truetype')
+  font-weight: normal
   font-style: normal
 
-//$font_light: 'Comfortaa Light'
-
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap')
-$Source_Sans_Pro: 'Source Sans Pro', sans-serif
+$Source_Sans_Pro: 'Source Sans Pro'
 
 
 $purple: #B4A2CA
@@ -139,6 +131,7 @@ $brown: #C3B0A2
 $grey_dark: #A9A9A9
 $black: #2B2827
 $transition_default: .3s linear
+$grey_light: #F5F7F9
 a
   color: $blue
   text-decoration: underline
@@ -146,6 +139,7 @@ a
   &:hover, &:focus
     color: $purple
     text-decoration: none
+
 
 
 button, input, .form-control
@@ -181,13 +175,84 @@ img, video
   max-width: 100%
 *
   outline: none
-
+p
+  margin-bottom: 12px
 ul
   padding: 0
   margin: 0
   li
     list-style: none
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, .page_title
+  font-family: $font
+  text-transform: uppercase
+
+.page_title
+  text-align: center
+h1, .h1
+  font-size: 36px
+  line-height: 46px
+  @media (max-width: 1200px)
+    font-size: 32px
+    line-height: 1.2
+  @media (max-width: 1100px)
+    font-size: 30px
+  @media (max-width: 767px)
+    font-size: 26px
+  @media (max-width: 575px)
+    font-size: 24px
+
+h2, .h2
+  font-size: 32px
+  line-height: 28px
+  margin-bottom: 30px
+  @media (max-width: 1200px)
+    font-size: 30px
+    line-height: 1.2
+    margin-bottom: 25px
+  @media (max-width: 1100px)
+    font-size: 28px
+  @media (max-width: 767px)
+    font-size: 24px
+    margin-bottom: 20px
+  @media (max-width: 575px)
+    font-size: 22px
+  &.text-center
+    margin-bottom: 70px
+    @media (max-width: 1200px)
+      margin-bottom: 50px
+    @media (max-width: 1100px)
+      margin-bottom: 30px
+
+h3, .h3
+  font-size: 28px
+  line-height: 28px
+  @media (max-width: 1200px)
+    font-size: 26px
+    line-height: 1.2
+  @media (max-width: 1100px)
+    font-size: 24px
+  @media (max-width: 767px)
+    font-size: 20px
+  @media (max-width: 575px)
+    font-size: 18px
+
+h4, .h4
+  font-size: 26px
+  line-height: 26px
+  @media (max-width: 1200px)
+    font-size: 24px
+    line-height: 1.2
+  @media (max-width: 1100px)
+    font-size: 22px
+  @media (max-width: 767px)
+    font-size: 18px
+  @media (max-width: 575px)
+    font-size: 16px
+
+.desc
+  p
+    font-family: $Source_Sans_Pro
 
 .container
   width: 100%
@@ -212,8 +277,14 @@ body
   background: #fff
   color: $black
   font-family: $Source_Sans_Pro
+  @media (max-width: 575px)
+    font-size: 14px
+    line-height: 1.2
 
-
+.wrapper
+  width: 100%
+  max-width: 1920px
+  margin: auto
 .h_row
   +flex
   +wrap
@@ -227,6 +298,9 @@ body
     padding: 10px 0
   .h_left
     width: 123px
+    @media (max-width: 375px)
+      width: 100px
+
   .h_right
     +flex
     +ai-center
@@ -234,6 +308,8 @@ body
     width: calc(100% - 123px)
     @media (max-width: 1100px)
       +j-end
+    @media (max-width: 375px)
+      width: calc(100% - 100px)
 
 
 
@@ -244,6 +320,7 @@ body
   text-transform: uppercase
   font-family: $font
   font-weight: 700
+  display: inline-block
   text-decoration: none
   +border-radius(30px)
   padding: 15px 30px
@@ -269,6 +346,12 @@ body
       span
         display: none
 
+  &.btn_blue
+    background: $blue
+    &:hover, &:focus
+      background: $purple
+
+
 
 .social_menu
   +flex
@@ -281,6 +364,10 @@ body
       padding: 0 2px
     a
       display: inline-block
+      &:hover
+        .icon
+          *
+            fill: $blue
 
 .personal_box
   @media (max-width: 1100px)
@@ -362,6 +449,8 @@ body
           min-width: 200px
           +box-shadow(3px 6px 35px rgba(0, 0, 0, 0.1))
           +border-radius(8px)
+          background: #fff
+          z-index: 10
 
 
 
@@ -417,3 +506,181 @@ body
         margin: auto
       &:nth-child(3)
         bottom: 0
+
+
+.main_slider_item
+  background-position: center
+  background-size: cover
+  height: 443px
+  @media (max-width: 767px)
+    height: 400px
+  > .container
+    height: 100%
+    padding-top: 60px
+    padding-bottom: 60px
+
+
+.main_slider_content
+  max-width: 280px
+  @media (max-width: 1200px)
+    background: rgba(255, 255, 255, 0.7)
+    padding: 10px
+    +border-radius(8px)
+  .title
+    color: $black
+    font-size: 50px
+    line-height: 46px
+    text-transform: uppercase
+    font-family: $font
+    margin-bottom: 10px
+    @media (max-width: 1200px)
+      font-size: 45px
+    @media (max-width: 1100px)
+      font-size: 40px
+    @media (max-width: 767px)
+      font-size: 35px
+    @media (max-width: 575px)
+      font-size: 25px
+  .sub_title
+    font-family: $font
+    font-size: 22px
+    line-height: 24px
+    margin-bottom: 30px
+    @media (max-width: 1200px)
+      font-size: 20px
+    @media (max-width: 1100px)
+      font-size: 18px
+    @media (max-width: 767px)
+      font-size: 16px
+    @media (max-width: 575px)
+      font-size: 14px
+
+
+
+
+.slick-dots
+  bottom: 15px
+  li
+    width: 12px
+    height: 12px
+    margin: 0 6px
+    &.slick-active
+      button
+        background: $blue
+    button
+      width: 12px
+      height: 12px
+      background: #fff
+      +border-radius(50%)
+      &:before
+        display: none
+.slick-arrow
+  width: 19px
+  height: 34px
+  z-index: 2
+  opacity: 1
+  @media (max-width: 767px)
+    display: none !important
+  &:before
+    +b_a
+    +m_a
+    width: 19px
+    height: 34px
+
+.slick-prev
+  left: 20px
+  &:before
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='19' height='34' viewBox='0 0 19 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.4437 33.4468C18.1165 33.772 17.6812 33.9674 17.2194 33.9963C16.7577 34.0251 16.3012 33.8855 15.9356 33.6036L15.757 33.4468L0.556454 18.3345C0.229306 18.0092 0.0327802 17.5764 0.00374646 17.1173C-0.0252891 16.6582 0.11516 16.2044 0.398747 15.8409L0.556454 15.6633L15.757 0.551022C16.0989 0.212227 16.5577 0.0155337 17.0403 0.000881366C17.5228 -0.0137671 17.9928 0.154732 18.3549 0.472157C18.717 0.789578 18.944 1.23212 18.9898 1.7099C19.0355 2.18768 18.8967 2.66488 18.6014 3.04456L18.4437 3.22213L4.58649 16.9989L18.4437 30.7757C18.7999 31.1299 19 31.6103 19 32.1112C19 32.6121 18.7999 33.0925 18.4437 33.4468Z' fill='%2385B1D6'/%3e%3c/svg%3e ")
+
+.slick-next
+  right: 20px
+  &:before
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='19' height='34' viewBox='0 0 19 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.556314 0.553227C0.883492 0.227978 1.3188 0.0325924 1.78056 0.00372558C2.24233 -0.0251412 2.69882 0.114495 3.0644 0.396436L3.24301 0.553227L18.4435 15.6656C18.7707 15.9908 18.9672 16.4236 18.9963 16.8827C19.0253 17.3418 18.8848 17.7956 18.6013 18.1591L18.4435 18.3367L3.24301 33.449C2.90108 33.7878 2.44226 33.9845 1.95973 33.9991C1.47721 34.0138 1.00717 33.8453 0.645087 33.5278C0.283 33.2104 0.0560157 32.7679 0.0102362 32.2901C-0.0355432 31.8123 0.103315 31.3351 0.398608 30.9554L0.556314 30.7779L14.4135 17.0011L0.556314 3.22433C0.200107 2.87008 0 2.38968 0 1.88878C0 1.38787 0.200107 0.907474 0.556314 0.553227Z' fill='%2385B1D6'/%3e%3c/svg%3e ")
+
+
+
+section
+  padding: 100px 0
+  @media (max-width: 1200px)
+    padding: 70px 0
+  @media (max-width: 1100px)
+    padding: 50px 0
+  @media (max-width: 767px)
+    padding: 30px 0
+
+.grey_light
+  background: $grey_light
+
+.pr_row
+  +j-center
+  > div
+    @media (max-width: 1200px)
+      margin-bottom: 20px
+    @media (max-width: 575px)
+      &:last-child
+        margin-bottom: 0
+.pr_item
+  background: #fff
+  +box-shadow(0px 0px 30px rgba(0, 0, 0, 0.02))
+  +border-radius(8px)
+  padding: 25px
+  +flex
+  +ai-end
+  min-height: 270px
+  @media (max-width: 1200px)
+    padding: 20px
+  @media (max-width: 767px)
+    padding: 15px
+  @media (max-width: 767px)
+    min-height: auto
+  picture
+    display: inline-block
+    margin-bottom: 15px
+    @media (min-width: 576px)
+      height: 100px
+  .text
+    color: $blue
+    font-size: 16px
+    line-height: 26px
+    font-family: $font
+    text-transform: uppercase
+    @media (max-width: 1200px)
+      font-size: 14px
+      line-height: 1.3
+    @media (min-width: 768px)
+      min-height: 78px
+
+
+
+
+
+
+img
+  &.b_radius
+    +border-radius(8px)
+    +box-shadow(0px 0px 30px rgba(0, 0, 0, 0.06))
+
+
+
+.main_membership
+  background: #DFE5E3
+  .m_logo
+    margin-bottom: 30px
+    @media (max-width: 767px)
+      margin-bottom: 20px
+  .h2, h2
+    margin-bottom: 22px
+    @media (max-width: 767px)
+      margin-bottom: 15px
+  .text
+    font-family:  $font
+    margin-bottom: 35px
+    @media (max-width: 1200px)
+      margin-bottom: 30px
+    @media (max-width: 767px)
+      margin-bottom: 25px
+
+  .btn_default
+    width: 100%
+    max-width: 255px
+    text-align: center

@@ -36,11 +36,11 @@ $(document).ready(function(){
 
     $(".main_slider").slick({
         infinite: true,
-        arrows: false,
+        arrows: true,
         dots: true,
-        //autoplay: true,
-        //speed: 3000,
-        //autoplaySpeed: 3000,
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1
     });
