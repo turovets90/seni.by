@@ -1,0 +1,419 @@
+@import "bootstrap"
+@import "slick-less"
+@import "fancybox"
+
+
+=b_a()
+  content: ''
+  position: absolute
+
+=m_a()
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  margin: auto
+
+
+=flex()
+  display: flex
+  display: -webkit-flex
+
+=j-center()
+  justify-content: center
+  -webkit-justify-content: center
+
+=j-beetween()
+  justify-content: space-between
+  -webkit-justify-content: space-between
+
+=j-space-around()
+  justify-content: space-around
+  -webkit-justify-content: space-around
+
+=j-end()
+  justify-content: flex-end
+  -webkit-justify-content: flex-end
+
+=j-start()
+  justify-content: flex-start
+  -webkit-justify-content: flex-start
+
+=ai-center()
+  align-items: center
+  -webkit-align-items: center
+
+=ai-start()
+  align-items: flex-start
+  -webkit-align-items: flex-start
+
+=ai-end()
+  align-items: flex-end
+  -webkit-align-items: flex-end
+
+=as-center()
+  align-self: center
+  -webkit-align-self: center
+
+=as-end()
+  align-self: flex-end
+  -webkit-align-self: flex-end
+
+=as-start()
+  align-self: flex-start
+  -webkit-align-self: flex-start
+
+=wrap()
+  flex-wrap: wrap
+  -webkit-flex-wrap: wrap
+
+=col()
+  flex-direction: column
+  -webkit-flex-direction: column
+
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+
+=box-shadow($box-shadow)
+  -webkit-box-shadow: $box-shadow
+  -moz-box-shadow: $box-shadow
+  box-shadow: $box-shadow
+
+
+=transform($transform)
+  transform: $transform
+  -webkit-transform: $transform
+  -moz-transform: $transform
+  -ms-transform: $transform
+  -o-transform: $transform
+
+
+=transition($transition_default)
+  transition: $transition_default
+  -webkit-transition: $transition_default
+  -moz-transition: $transition_default
+  -o-transition: $transition_default
+
+
+//@font-face
+  font-family: 'Comfortaa'
+  src: url('../fonts/Comfortaa.eot')
+  src: local('Comfortaa'), url('../fonts/Comfortaa.eot?#iefix') format('embedded-opentype'), url('../fonts/Comfortaa.woff') format('woff'), url('../fonts/Comfortaa.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+//$font: 'Comfortaa'
+
+@font-face
+  font-family: "bootstrap-icons"
+  src: url("../fonts/bootstrap-icons.woff2?8bd4575acf83c7696dc7a14a966660a3") format("woff2"), url("../fonts/bootstrap-icons.woff?8bd4575acf83c7696dc7a14a966660a3") format("woff")
+
+
+@font-face 
+  font-family: 'Comfortaa Bold'
+  src: url('../fonts/Comfortaa-Bold.eot')
+  src: local('Comfortaa Bold'), local('Comfortaa-Bold'), url('../fonts/Comfortaa-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Comfortaa-Bold.woff') format('woff'), url('../fonts/Comfortaa-Bold.ttf') format('truetype')
+  font-weight: bold
+  font-style: normal
+$font: 'Comfortaa Bold'
+
+//@font-face
+  font-family: 'Comfortaa Light'
+  src: url('../fonts/Comfortaa-Light.eot')
+  src: local('Comfortaa Light'), local('Comfortaa-Light'), url('../fonts/Comfortaa-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Comfortaa-Light.woff') format('woff'), url('../fonts/Comfortaa-Light.ttf') format('truetype')
+  font-weight: 300
+  font-style: normal
+
+//$font_light: 'Comfortaa Light'
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap')
+$Source_Sans_Pro: 'Source Sans Pro', sans-serif
+
+
+$purple: #B4A2CA
+$blue: #85B1D6
+$brown: #C3B0A2
+$grey_dark: #A9A9A9
+$black: #2B2827
+$transition_default: .3s linear
+a
+  color: $blue
+  text-decoration: underline
+  +transition($transition_default)
+  &:hover, &:focus
+    color: $purple
+    text-decoration: none
+
+
+button, input, .form-control
+  outline: none
+
+.form-control
+  &:hover, &:focus
+    box-shadow: none
+    outline: none
+
+[class^="bi-"]::before, [class*=" bi-"]::before
+  display: inline-block
+  font-family: bootstrap-icons !important
+  font-style: normal
+  font-weight: normal !important
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+  vertical-align: -.125em
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+.bi-person-circle
+  &:before
+    content: "\f4d7"
+button
+  cursor: pointer
+
+  &:hover, &:focus
+    +box-shadow(none)
+    outline: none
+
+img, video
+  max-width: 100%
+*
+  outline: none
+
+ul
+  padding: 0
+  margin: 0
+  li
+    list-style: none
+
+
+.container
+  width: 100%
+  max-width: 1280px
+
+@media (min-width: 1201px)
+  .container
+    padding-left: 20px
+    padding-right: 20px
+  .row
+    margin-left: -20px
+    margin-right: -20px
+  div
+    &[class^="col"]
+      padding-left: 20px
+      padding-right: 20px
+
+
+body
+  font-size: 16px
+  line-height: 26px
+  background: #fff
+  color: $black
+  font-family: $Source_Sans_Pro
+
+
+.h_row
+  +flex
+  +wrap
+  +ai-center
+  +j-beetween
+  padding: 22px 0
+  position: relative
+  @media (max-width: 1200px)
+    padding: 15px 0
+  @media (max-width: 575px)
+    padding: 10px 0
+  .h_left
+    width: 123px
+  .h_right
+    +flex
+    +ai-center
+    +j-beetween
+    width: calc(100% - 123px)
+    @media (max-width: 1100px)
+      +j-end
+
+
+
+.btn_default
+  color: #fff
+  background: $purple
+  font-size: 14px
+  text-transform: uppercase
+  font-family: $font
+  font-weight: 700
+  text-decoration: none
+  +border-radius(30px)
+  padding: 15px 30px
+  @media (max-width: 1200px)
+    padding: 10px 20px
+  &:hover, &:focus
+    text-decoration: none
+    background: $blue
+    color: #fff
+  &.personal_link
+    i
+      +flex
+      &:before
+        font-size: 21px
+    @media (min-width: 576px)
+      i
+        display: none
+
+    @media (max-width: 575px)
+      padding: 3px
+      +flex
+
+      span
+        display: none
+
+
+.social_menu
+  +flex
+  +ai-center
+  li
+    padding: 0 5px
+    @media (max-width: 1200px)
+      padding: 0 3px
+    @media (max-width: 575px)
+      padding: 0 2px
+    a
+      display: inline-block
+
+.personal_box
+  @media (max-width: 1100px)
+    margin-left: 15px
+  @media (max-width: 575px)
+    margin-left: 10px
+
+.main_menu
+  @media (max-width: 1100px)
+    display: none
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    +box-shadow(3px 6px 35px rgba(0, 0, 0, 0.1))
+    +border-radius(8px)
+  .nav
+    +flex
+    +ai-center
+    @media (max-width: 1100px)
+      +wrap
+
+    li
+      padding: 8px
+      position: relative
+      @media (max-width: 1200px)
+        padding: 5px
+      @media (max-width: 1100px)
+        width: 100%
+      @media (min-width: 1101px)
+        &:hover
+          > .sub_menu
+            display: block
+      &.active
+        a
+          border-bottom: 2px solid $purple
+
+      a
+        text-decoration: none
+        color: $black
+        text-transform: uppercase
+        font-size: 14px
+        font-family: $font
+        font-weight: 700
+        padding: 3px 0
+        border-bottom: 2px solid #fff
+        @media (max-width: 1200px)
+          font-size: 13px
+        &:hover
+          border-bottom: 2px solid $purple
+          color: $purple
+      .arrow
+        position: absolute
+        right: 3px
+        top: 3px
+        width: 30px
+        height: 30px
+        cursor: pointer
+        &.act
+          &:after
+            opacity: 0
+        &:before, &:after
+          +b_a
+          +m_a
+          width: 25px
+          height: 3px
+          background: $purple
+          +border-radius(3px)
+        &:after
+          +transform(rotate(90deg))
+        @media (min-width: 1101px)
+          display: none
+      .sub_menu
+        display: none
+        @media (min-width: 1101px)
+          position: absolute
+          top: 100%
+          left: 0
+          min-width: 200px
+          +box-shadow(3px 6px 35px rgba(0, 0, 0, 0.1))
+          +border-radius(8px)
+
+
+
+
+
+.mm_btn
+  width: 30px
+  height: 21px
+  +flex
+  margin-left: 15px
+  @media (max-width: 767px)
+    margin-left: 10px
+  @media (min-width: 1101px)
+    display: none
+  @media (max-width: 575px)
+    width: 25px
+    height: 20px
+  .hamburger
+    width: 30px
+    height: 21px
+    background: none
+    border: 0
+    position: relative
+    @media (max-width: 575px)
+      width: 25px
+      height: 20px
+    &.act
+      span
+        &:nth-child(1)
+          +transform(rotate(45deg))
+          top: 9px
+        &:nth-child(2)
+          opacity: 0
+        &:nth-child(3)
+          +transform(rotate(-45deg))
+          bottom: 9px
+    span
+      position: absolute
+      left: 0
+      width: 100%
+      height: 3px
+      background: $purple
+      +border-radius(3px)
+      +transition($transition_default)
+      @media (max-width: 575px)
+        height: 2px
+        +border-radius(2px)
+      &:nth-child(1)
+        top: 0
+      &:nth-child(2)
+        top: 0
+        bottom: 0
+        margin: auto
+      &:nth-child(3)
+        bottom: 0

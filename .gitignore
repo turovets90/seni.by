@@ -1,0 +1,6 @@
+.idea
+libs/
+*.pug
+inc/
+design/
+convert/
