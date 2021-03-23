@@ -105,6 +105,13 @@
   src: url("../fonts/bootstrap-icons.woff2?8bd4575acf83c7696dc7a14a966660a3") format("woff2"), url("../fonts/bootstrap-icons.woff?8bd4575acf83c7696dc7a14a966660a3") format("woff")
 
 
+@font-face
+  font-family: 'Comfortaa'
+  src: url('../fonts/Comfortaa.eot')
+  src: local('Comfortaa'), local('Comfortaa'), url('../fonts/Comfortaa.eot?#iefix') format('embedded-opentype'), url('../fonts/Comfortaa.woff') format('woff'), url('../fonts/Comfortaa.ttf') format('truetype')
+  font-weight: bold
+  font-style: normal
+$font_reg: 'Comfortaa'
 @font-face 
   font-family: 'Comfortaa Bold'
   src: url('../fonts/Comfortaa-Bold.eot')
@@ -276,7 +283,7 @@ body
   line-height: 26px
   background: #fff
   color: $black
-  font-family: $Source_Sans_Pro
+  font-family: $font
   @media (max-width: 575px)
     font-size: 14px
     line-height: 1.2
@@ -373,7 +380,7 @@ body
   @media (max-width: 1100px)
     margin-left: 15px
   @media (max-width: 575px)
-    margin-left: 10px
+    margin-left: 5px
 
 .main_menu
   @media (max-width: 1100px)
@@ -384,6 +391,8 @@ body
     width: 100%
     +box-shadow(3px 6px 35px rgba(0, 0, 0, 0.1))
     +border-radius(8px)
+    background: #fff
+    z-index: 99
   .nav
     +flex
     +ai-center
@@ -633,6 +642,8 @@ section
     padding: 15px
   @media (max-width: 767px)
     min-height: auto
+  @media (max-width: 575px)
+    text-align: center
   picture
     display: inline-block
     margin-bottom: 15px
@@ -660,10 +671,14 @@ img
     +border-radius(8px)
     +box-shadow(0px 0px 30px rgba(0, 0, 0, 0.06))
 
-
+.seo_text
+  @media (max-width: 575px)
+    text-align: center
 
 .main_membership
   background: #DFE5E3
+  @media (max-width: 575px)
+    text-align: center
   .m_logo
     margin-bottom: 30px
     @media (max-width: 767px)
@@ -684,3 +699,211 @@ img
     width: 100%
     max-width: 255px
     text-align: center
+
+
+
+.products_container
+  @media (min-width: 1201px)
+    padding-bottom: 60px
+
+.products_list
+  > div
+    margin-bottom: 40px
+    @media (max-width: 1200px)
+      margin-bottom: 20px
+.product_item
+  width: 100%
+  +box-shadow( 0px 0px 30px rgba(0, 0, 0, 0.02))
+  +border-radius(8px)
+  background: #fff
+  text-align: center
+  padding: 27px 20px 40px
+  @media (max-width: 1200px)
+    padding: 20px 20px 30px
+  @media (max-width: 767px)
+    padding: 20px
+  .product_img_link
+    display: inline-block
+    position: relative
+    height: 258px
+    width: 100%
+    margin-bottom: 15px
+    @media (max-width: 1200px)
+      height: 240px
+    @media (max-width: 767px)
+      height: 200px
+    img
+      position: absolute
+      +m_a
+      max-width: 99%
+      max-height: 99%
+  .product_item_name
+    color: $blue
+    font-size: 18px
+    line-height: 26px
+    text-transform: uppercase
+    text-decoration: none
+    margin-bottom: 15px
+
+    @media (max-width: 1200px)
+      font-size: 16px
+    @media (max-width: 767px)
+      font-size: 14px
+      margin-bottom: 10px
+    @media (min-width: 768px)
+      +flex
+      +ai-center
+      +j-center
+      -webkit-box-orient: vertical
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: normal
+      -webkit-line-clamp: 2
+      height: 50px
+
+    &:hover, &:focus
+      color: $purple
+
+  .scores
+    color: $grey_dark
+    font-size: 18px
+    margin-bottom: 12px
+    @media (max-width: 1200px)
+      font-size: 16px
+    @media (max-width: 767px)
+      font-size: 14px
+  .btn_default
+    width: 100%
+    text-align: center
+
+
+.products_slider
+  .slick-dots
+    bottom: -25px
+
+
+.blue
+  color: $blue
+
+.main_contacts
+  @media (max-width: 575px)
+    text-align: center
+  .c_group
+    max-width: 400px
+    margin-bottom: 30px
+    &:last-of-type
+      @media (min-width: 1201px)
+        margin-bottom: 85px
+
+
+    .blue
+      font-size: 20px
+      line-height: 26px
+      margin-bottom: 3px
+      @media (max-width: 1200px)
+        font-size: 18px
+        line-height: 1.2
+      @media (max-width: 767px)
+        font-size: 16px
+    a
+      color: $black
+      text-decoration: none
+      font-size: 20px
+      @media (max-width: 1200px)
+        font-size: 18px
+      @media (max-width: 767px)
+        font-size: 16px
+      &.tel
+        font-size: 30px
+        line-height: 28px
+        @media (max-width: 1200px)
+          font-size: 28px
+          line-height: 1.2
+        @media (max-width: 767px)
+          font-size: 24px
+
+  .grey
+    color: $grey_dark
+    font-size: 16px
+    line-height: 24px
+    font-family: $font_reg
+    max-width: 454px
+    @media (max-width: 1200px)
+      font-size: 14px
+      line-height: 1.2
+
+footer
+  border-top: 2px solid #F5F7F9
+  padding: 60px 0 50px
+  @media (max-width: 1200px)
+    padding: 40px 0 30px
+  @media (max-width: 1100px)
+    padding: 30px 0
+  @media (max-width: 767px)
+    text-align: center
+
+.f_logo
+  margin-bottom: 25px
+
+.f_row
+  @media (max-width: 767px)
+    .order_m1
+      order: 1
+      margin-bottom: 20px
+    .order_m2
+      order: 2
+
+.f_desc
+  color: $black
+  font-size: 15px
+  line-height: 22px
+  font-family: $Source_Sans_Pro
+  max-width: 500px
+  margin-bottom: 25px
+
+.copyright
+  color: $black
+  opacity: 0.6
+  font-size: 15px
+  font-family: $Source_Sans_Pro
+  @media (max-width: 767px)
+    font-size: 14px
+
+.f_title
+  color: $blue
+  font-size: 18px
+  text-transform: uppercase
+  font-family: $font_reg
+  margin-bottom: 10px
+  @media (max-width: 767px)
+    margin-bottom: 5px
+    font-size: 16px
+.f_menu
+  @media (max-width: 767px)
+    margin-bottom: 20px
+  li
+    margin-bottom: 5px
+    a
+      color: $black
+      text-decoration: none
+      font-family: $Source_Sans_Pro
+      font-size: 16px
+      &:hover, &:focus
+        text-decoration: none
+        color: $blue
+
+.fc_group
+  &:first-of-type
+    margin-bottom: 40px
+  p, a
+    color: $black
+    text-decoration: none
+    font-size: 16px
+    font-family: $Source_Sans_Pro
+    line-height: 26px
+    @media (max-width: 767px)
+      font-size: 14px
+  a
+    &:hover
+      color: $blue
+

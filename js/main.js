@@ -45,6 +45,15 @@ $(document).ready(function(){
         slidesToScroll: 1
     });
 
+    if($(window).innerWidth() < 575){
+        $(".products_slider").slick({
+            infinite: true,
+            arrows: true,
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+    }
 
 
 
