@@ -56,6 +56,16 @@ $(document).ready(function(){
     }
 
 
+    $('select.custom_select').select2({
+        minimumResultsForSearch: -1
+    });
+
+
+    $('.file').filestyle({
+        //placeholder: "Загрузите файл",
+        text: "Открыть"
+    });
+
 
 });
 

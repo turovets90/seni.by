@@ -1,6 +1,7 @@
 @import "bootstrap"
 @import "slick-less"
 @import "fancybox"
+@import "select2"
 
 
 =b_a()
@@ -132,6 +133,15 @@ $font: 'Comfortaa Bold'
 $Source_Sans_Pro: 'Source Sans Pro'
 
 
+
+@font-face
+  font-family: 'Source Sans Pro SemiBold'
+  src: url('../fonts/SourceSansPro-SemiBold.eot')
+  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url('../fonts/SourceSansPro-SemiBold.eot?#iefix') format('embedded-opentype'), url('../fonts/SourceSansPro-SemiBold.woff') format('woff'), url('../fonts/SourceSansPro-SemiBold.ttf') format('truetype')
+  font-weight: 600
+  font-style: normal
+$s600: 'Source Sans Pro SemiBold'
+
 $purple: #B4A2CA
 $blue: #85B1D6
 $brown: #C3B0A2
@@ -153,6 +163,8 @@ button, input, .form-control
   outline: none
 
 .form-control
+  &:disabled
+    background: $grey_light
   &:hover, &:focus
     box-shadow: none
     outline: none
@@ -272,12 +284,13 @@ h4, .h4
   .row
     margin-left: -20px
     margin-right: -20px
-  div
+  div, li
     &[class^="col"]
       padding-left: 20px
       padding-right: 20px
 
-
+strong, b
+  font-family: $font
 body
   font-size: 16px
   line-height: 26px
@@ -1283,13 +1296,13 @@ footer
     margin-bottom: 30px
   @media (max-width: 767px)
     margin-bottom: 20px
-  @media (max-width: 575px)
-    margin-bottom: 10px
+
 label
   color: $black
   font-size: 16px
   font-family: $Source_Sans_Pro
   margin-bottom: 5px
+  display: block
 
 .forgot_your_password
   position: absolute
@@ -1395,7 +1408,7 @@ label
         width: 23px
         height: 23px
         +border-radius(3px)
-        border: 1px solid $blue
+        border: 2px solid $blue
       &:after
         +b_a
         left: 4px
@@ -1425,3 +1438,283 @@ form
 .authorization_form
   max-width: 386px
   margin: auto
+
+
+
+
+
+
+
+.reviewStars-input
+  input
+    &:checked
+      ~ label
+        background: url(../img/r_star.svg)
+        width: 25px
+        height: 24px
+.reviewStars-input
+  label
+    background: url(../img/r_star.svg)
+    width: 25px
+    height: 24px
+.reviewStars-input
+  label
+    &:hover
+      background: url(../img/r_star_active.svg)
+      width: 25px
+      height: 24px
+.reviewStars-input
+  label
+    &:hover
+      ~ label
+        background: url(../img/r_star_active.svg)
+        width: 25px
+        height: 24px
+.reviewStars-input
+  overflow: hidden
+  position: relative
+  float: left
+//padding-top: 8px
+
+.reviewStars-input
+  input
+    &:checked
+      ~ label
+        background: url(../img/r_star_active.svg)
+        width: 25px
+        height: 24px
+
+
+.reviewStars-input
+  input
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0)
+    opacity: 0
+    width: 0
+    //height: 20px
+    top: 0
+    z-index: 0
+    position: absolute
+
+
+.reviewStars-input
+  label
+    background-position: 0 0
+    width: 25px
+    height: 24px
+    float: right
+    cursor: pointer
+    position: relative
+    z-index: 1
+    margin-right: 6px
+    margin-bottom: 0
+
+
+
+.interview_content
+  +box-shadow(0px 0px 30px rgba(0, 0, 0, 0.06))
+  +border-radius(8px)
+  background: #fff
+  padding: 50px 30px
+  @media (max-width: 1200px)
+    padding: 40px 30px
+  @media (max-width: 1100px)
+    padding: 30px
+  @media (max-width: 767px)
+    padding: 20px
+  .interview_form
+    max-width: 600px
+    margin: auto
+    .row
+      margin-left: -12px
+      margin-right: -15px
+    div, li
+      &[class^="col"]
+        padding-left: 12px
+        padding-right: 12px
+    .btn_default
+      max-width: 317px
+    label
+      @media (min-width: 1201px)
+        white-space: nowrap
+    h1, .h1
+      font-size: 20px
+      line-height: 30px
+      text-transform: uppercase
+      text-align: center
+      margin-bottom: 30px
+      @media (max-width: 1200px)
+        font-size: 18px
+        line-height: 1.2
+      @media (max-width: 767px)
+        font-size: 16px
+        margin-bottom: 20px
+
+form
+  .select2
+    width: 100% !important
+
+.checkbox_list
+  li
+    margin-bottom: 12px
+
+
+.select2-container--default
+  .select2-selection--single
+    width: 100%
+    height: 50px
+    border: 0
+    background: #F5F7F9
+    +border-radius(3px)
+    +flex
+    +ai-center
+    padding-left: 5px
+    @media (min-width: 1201px)
+
+      padding-left: 29px
+    @media (max-width: 1200px)
+      height: 40px
+
+.select2-container--default
+  .select2-selection--single
+    .select2-selection__rendered
+      color: $black
+      font-size: 16px
+      font-family: $Source_Sans_Pro
+      padding-right: 30px
+
+
+.select2-container--default
+  .select2-selection--single
+    .select2-selection__arrow
+      width: 12px
+      height: 9px
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12 2.02L10.59 0.609999L6 5.19L1.41 0.609998L-6.16331e-08 2.02L6 8.02L12 2.02Z' fill='%232B2827'/%3e%3c/svg%3e ")
+      top: 0
+      right: 25px
+      bottom: 0
+      margin: auto
+      b
+        display: none
+
+label
+  strong, b
+    font-family: $s600
+
+
+textarea
+  &.form-control
+    height: 175px
+    @media (max-width: 1200px)
+      height: 150px
+    @media (max-width: 575px)
+      height: 100px
+
+
+
+.sidebar
+  +border-radius(8px)
+  background: #fff
+  +box-shadow(0px 0px 30px rgba(0, 0, 0, 0.06))
+  @media (min-width: 1201px)
+
+    height: 100%
+  @media (max-width: 767px)
+    margin-bottom: 20px
+  .user_name
+    color: $black
+    font-size: 18px
+    line-height: 22px
+    font-family: $s600
+    margin-bottom: 15px
+  .text
+    font-size: 15px
+    font-family: $Source_Sans_Pro
+
+  .sidebar_top, .sidebar_bottom
+    padding: 25px 28px
+    @media (max-width: 1200px)
+      padding: 25px
+    @media (max-width: 1100px)
+      padding: 20px
+    @media (max-width: 767px)
+      padding: 15px
+      text-align: center
+  .sidebar_top
+    border-bottom: 4px solid #F5F7F9
+  .number
+    color: $purple
+    font-size: 24px
+    line-height: 1.2
+    margin-bottom: 10px
+    @media (max-width: 1200px)
+      font-size: 22px
+    @media (max-width: 1100px)
+      font-size: 20px
+    &:last-of-type
+      margin-bottom: 0
+
+
+
+.sidebar_menu
+  li
+    text-align: center
+    margin-bottom: 18px
+    @media (max-width: 1200px)
+      margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
+    &.active
+      a
+        color: $blue
+    a
+      color: $black
+      text-decoration: none
+      font-size: 14px
+      text-transform: uppercase
+      &:hover
+        text-decoration: none
+        color: $blue
+
+
+
+.addcode_form
+  max-width: 720px
+  margin: auto
+  .btn_default
+    max-width: 253px
+  h1, .h1
+    font-size: 18px
+
+
+.bootstrap-filestyle
+  .group-span-filestyle
+    .btn
+      border: 0
+      width: 160px
+      height: 50px
+      +border-radius(30px)
+      background: $blue
+      color: #fff
+      font-size: 14px
+      font-family: $font
+      text-transform: uppercase
+      +flex
+      +ai-center
+      +j-center
+      margin-left: 20px
+      @media (max-width: 1200px)
+        height: 40px
+      @media (max-width: 767px)
+        width: 140px
+      .buttonText
+        position: relative
+        padding-left: 30px
+        &:before
+          +b_a
+          left: 0
+          top: 0
+          bottom: 0
+          margin: auto
+          width: 20px
+          height: 16px
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='16' viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.9375 6.53906H16.6172V4.09844C16.6172 3.71816 16.31 3.41094 15.9297 3.41094H9.16211L6.64199 1.00039C6.60993 0.970372 6.56775 0.953502 6.52383 0.953125H1.0625C0.682227 0.953125 0.375 1.26035 0.375 1.64062V14.3594C0.375 14.7396 0.682227 15.0469 1.0625 15.0469H16.0586C16.3379 15.0469 16.5914 14.8771 16.6967 14.6172L19.5756 7.48438C19.6078 7.40273 19.625 7.31465 19.625 7.22656C19.625 6.84629 19.3178 6.53906 18.9375 6.53906ZM15.0703 6.53906H4.11328C3.83398 6.53906 3.58047 6.70879 3.4752 6.96875L1.92188 10.8188V2.5H5.97168L8.54121 4.95781H15.0703V6.53906Z' fill='white'/%3e%3c/svg%3e ")

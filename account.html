@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Авторизация</title>
+    <title>Аккаунт</title>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -57,29 +57,50 @@
       <div class="page_content personal_content">
         <div class="container">
           <div class="row">
-            <div class="col-12 col-md-4 d-none d-md-block"><img class="b_radius" src="img/modern-old-lady.png"/></div>
-            <div class="col-12 col-md-8">
-              <div class="right_content mb_40">
-                <div class="h1">войти в кабинет</div>
-                <div class="authorization_form">
+            <div class="col-12 col-md-3">
+              <div class="sidebar">
+                <div class="sidebar_top">
+                  <div class="user_name">Здравствуйте, Анисимова Ирина Эдуардовна!</div>
+                  <div class="text">Номер клубной карты</div>
+                  <div class="number">786 672 892</div>
+                  <div class="text">Баллов на счету</div>
+                  <div class="number">1 286</div>
+                </div>
+                <div class="sidebar_bottom">
+                  <ul class="sidebar_menu">
+                    <li class="active"><a href="#">Добавить штрих-код</a></li>
+                    <li><a href="#">личные данные</a></li>
+                    <li><a href="#">изменить пароль</a></li>
+                    <li><a href="#">Выйти</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="right_content">
+                <div class="addcode_form">
+                  <div class="h1">Добавить штрих-код</div>
                   <form>
                     <div class="row">
                       <div class="col-12 field">
-                        <label>Электронная почта</label>
-                        <input class="form-control" type="text" placeholder="example@email.com"/>
+                        <label>Добавить фото чека *</label>
+                        <input class="form-control file" type="file"/>
                       </div>
-                      <div class="col-12 field">
-                        <label>Пароль</label>
-                        <input class="form-control" type="password"/><a class="forgot_your_password" href="#">Забыли пароль?</a>
+                      <div class="col-12 col-md-6 field">
+                        <label>Штрих-код *</label>
+                        <input class="form-control phone" type="text"/>
+                      </div>
+                      <div class="col-12 col-md-6 field">
+                        <label>Дополнительный штрих-код</label>
+                        <input class="form-control" type="text"/>
                       </div>
                       <div class="col-12">
-                        <button class="btn_default" type="submit">Войти</button>
+                        <button class="btn_default" type="submit">Отправить</button>
                       </div>
                     </div>
                   </form>
                 </div>
-              </div><a class="title_box" href="#">
-                <div class="h1">войти в кабинет</div></a>
+              </div>
             </div>
           </div>
         </div>
