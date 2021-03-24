@@ -207,7 +207,7 @@ h1, .h1
   @media (max-width: 767px)
     font-size: 26px
   @media (max-width: 575px)
-    font-size: 24px
+    font-size: 22px
 
 h2, .h2
   font-size: 32px
@@ -331,6 +331,7 @@ body
   text-decoration: none
   +border-radius(30px)
   padding: 15px 30px
+  border: 0
   @media (max-width: 1200px)
     padding: 10px 20px
   &:hover, &:focus
@@ -1222,3 +1223,205 @@ footer
       text-transform: uppercase
       font-size: 22px
       line-height: 19px
+
+
+
+.mb_40
+  margin-bottom: 40px
+  @media (max-width: 1200px)
+    margin-bottom: 30px
+  @media (max-width: 575px)
+    margin-bottom: 20px
+.title_box
+  +box-shadow(0px 0px 30px rgba(0, 0, 0, 0.06))
+  +border-radius(8px)
+  background: #fff
+  width: 100%
+  height: 128px
+  +flex
+  +ai-center
+  +j-center
+  text-decoration: none
+  color: $black
+  &:hover, &:focus
+    text-decoration: none
+    color: $purple
+  @media (max-width: 1200px)
+    height: 100px
+  @media (max-width: 1100px)
+    height: 90px
+  @media (max-width: 767px)
+    height: 80px
+  h1, .h1
+    margin-bottom: 0
+
+
+
+.right_content
+  +box-shadow(0px 0px 30px rgba(0, 0, 0, 0.06))
+  +border-radius(8px)
+  background: #fff
+  padding: 60px 30px
+  @media (max-width: 1200px)
+    padding: 30px
+  @media (max-width: 767px)
+    padding: 20px
+  @media (max-width: 575px)
+    padding: 15px
+  h1, .h1
+    text-align: center
+    margin-bottom: 12px
+
+.registration_form
+  max-width: 600px
+  margin: auto
+
+.field
+  margin-bottom: 32px
+  position: relative
+  @media (max-width: 1200px)
+    margin-bottom: 30px
+  @media (max-width: 767px)
+    margin-bottom: 20px
+  @media (max-width: 575px)
+    margin-bottom: 10px
+label
+  color: $black
+  font-size: 16px
+  font-family: $Source_Sans_Pro
+  margin-bottom: 5px
+
+.forgot_your_password
+  position: absolute
+  right: 40px
+  bottom: 13px
+  color: $purple
+  font-family: $Source_Sans_Pro
+  text-decoration: none
+  &:hover
+    text-decoration: none
+
+
+.form-control
+  font-size: 16px
+  color: $black
+  background: $grey_light
+  font-family: $Source_Sans_Pro
+  height: 50px
+  width: 100%
+  +border-radius(3px)
+  border: 0
+  @media (max-width: 1200px)
+    height: 40px
+    font-size: 14px
+  @media (min-width: 1201px)
+    padding-left: 28px
+
+  &[type="password"]
+    padding-right: 140px
+
+  &:focus
+    background: $grey_light
+  &::-webkit-input-placeholder
+    color: $black
+    opacity: 0.4
+    font-family: $Source_Sans_Pro
+    font-size: 16px
+    @media (max-width: 1200px)
+      font-size: 14px
+  &::-moz-placeholder
+    color: $black
+    opacity: 0.4
+    font-family: $Source_Sans_Pro
+    font-size: 16px
+    @media (max-width: 1200px)
+      font-size: 14px
+  &::-ms-input-placeholder
+    color: $black
+    opacity: 0.4
+    font-family: $Source_Sans_Pro
+    font-size: 16px
+    @media (max-width: 1200px)
+      font-size: 14px
+  &:-moz-placeholder
+    color: $black
+    opacity: 0.4
+    font-family: $Source_Sans_Pro
+    font-size: 16px
+    @media (max-width: 1200px)
+      font-size: 14px
+  &:-ms-input-placeholder
+    color: $black
+    opacity: 0.4
+    font-family: $Source_Sans_Pro
+    font-size: 16px
+    @media (max-width: 1200px)
+      font-size: 14px
+
+
+
+.checkbox
+  position: relative
+  &.agree
+    input
+      + label
+        @media (max-width: 1200px)
+          font-size: 13px
+        @media (max-width: 575px)
+          font-size: 12px
+  input
+    position: absolute
+    opacity: 0
+    &:checked
+      + label
+        &:before
+          background: $blue
+        &:after
+          opacity: 1
+    + label
+      position: relative
+      display: inline-block
+      padding-left: 40px
+      color: $black
+      font-size: 15px
+      line-height: 15px
+      font-family: $Source_Sans_Pro
+      &:before
+        +b_a
+        left: 0
+        top: 0
+        bottom: 0
+        margin: auto
+        width: 23px
+        height: 23px
+        +border-radius(3px)
+        border: 1px solid $blue
+      &:after
+        +b_a
+        left: 4px
+        top: 0
+        bottom: 0
+        margin: auto
+        width: 15px
+        height: 13px
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='13' viewBox='0 0 15 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.1409 1.1543H12.9804C12.8177 1.1543 12.6634 1.229 12.5637 1.35684L5.71892 10.0278L2.43679 5.86914C2.38714 5.8061 2.32386 5.75513 2.25169 5.72005C2.17952 5.68497 2.10034 5.6667 2.02009 5.6666H0.859644C0.748413 5.6666 0.686987 5.79443 0.755054 5.88076L5.30222 11.6415C5.51472 11.9104 5.92312 11.9104 6.13728 11.6415L14.2455 1.3668C14.3136 1.28213 14.2521 1.1543 14.1409 1.1543Z' fill='white' stroke='white'/%3e%3c/svg%3e ")
+        opacity: 0
+
+
+form
+  .btn_default
+    width: 100%
+    max-width: 387px
+    text-align: center
+    font-family: $font_reg
+    font-size: 14px
+
+.personal_content
+  padding: 40px 0
+  @media (max-width: 1200px)
+    padding: 30px 0
+
+
+.authorization_form
+  max-width: 386px
+  margin: auto
