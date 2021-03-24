@@ -918,6 +918,8 @@ footer
   font-family: $Source_Sans_Pro
   max-width: 500px
   margin-bottom: 25px
+  @media (max-width: 767px)
+    max-width: 100%
 
 .copyright
   color: $black
@@ -971,6 +973,9 @@ footer
   padding-top: 15px
   @media (max-width: 1100px)
     padding-top: 8px
+  &.pb
+    @media (min-width: 1201px)
+      padding-bottom: 75px
 .page_title
   margin-bottom: 60px
   @media (max-width: 1200px)
@@ -1123,3 +1128,97 @@ footer
 
 
 
+.gift_page_container
+  background: #fff
+  +box-shadow(0px 0px 30px rgba(0, 0, 0, 0.06))
+  +border-radius(8px)
+  padding: 53px 0
+  margin-top: 25px
+  @media (max-width: 1200px)
+    padding: 30px 0
+.gift_photo
+  +flex
+  +ai-center
+  +j-center
+  @media (max-width: 767px)
+    margin-bottom: 30px
+.gift_info
+  +flex
+  +ai-center
+  padding-right: 20px
+  padding-left: 20px
+  @media (max-width: 767px)
+    +j-center
+
+  .gift_info_content
+    max-width: 365px
+    h1
+      margin-bottom: 40px
+      @media (max-width: 1200px)
+        margin-bottom: 30px
+    .btn_default
+      width: 100%
+      max-width: 280px
+      text-align: center
+.gift_list
+  margin-bottom: 45px
+  @media (max-width: 1200px)
+    margin-bottom: 35px
+  li
+    +flex
+    +ai-center
+    margin-bottom: 8px
+    span
+      color: $brown
+      font-size: 16px
+      span
+        color: $black
+    img
+      margin-right: 10px
+
+
+
+.gift_page_content
+  padding-top: 60px
+  @media (max-width: 1200px)
+    padding-top: 40px
+  .desc
+    font-family: $Source_Sans_Pro
+    line-height: 26px
+    p
+      margin-bottom: 35px
+    ul
+      margin-bottom: 30px
+      li
+        margin-bottom: 5px
+
+
+.gift_options
+  @media (max-width: 767px)
+    +flex
+    +wrap
+    +j-center
+    width: 100%
+  .gift_option_item
+    width: 100%
+    max-width: 205px
+    height: 205px
+    +border-radius(5px)
+    +box-shadow(0px 0px 30px rgba(0, 0, 0, 0.06))
+    background: #fff
+    margin-bottom: 30px
+    padding: 10px
+    +flex
+    +ai-center
+    +j-center
+    text-align: center
+    @media (max-width: 767px)
+      margin: 10px
+    picture
+      margin-bottom: 25px
+      display: inline-block
+    .text
+      color: $blue
+      text-transform: uppercase
+      font-size: 22px
+      line-height: 19px
