@@ -404,7 +404,7 @@ body
     left: 0
     width: 100%
     +box-shadow(3px 6px 35px rgba(0, 0, 0, 0.1))
-    +border-radius(8px)
+    +border-radius(0 0 8px 8px)
     background: #fff
     z-index: 99
   .nav
@@ -1311,6 +1311,8 @@ label
   color: $purple
   font-family: $Source_Sans_Pro
   text-decoration: none
+  @media (max-width: 767px)
+    right: 15px
   &:hover
     text-decoration: none
 
@@ -1332,6 +1334,8 @@ label
 
   &[type="password"]
     padding-right: 140px
+    @media (max-width: 767px)
+      padding-right: 110px
 
   &:focus
     background: $grey_light
@@ -1399,6 +1403,7 @@ label
       font-size: 15px
       line-height: 15px
       font-family: $Source_Sans_Pro
+      cursor: pointer
       &:before
         +b_a
         left: 0
@@ -1682,6 +1687,8 @@ textarea
   margin: auto
   .btn_default
     max-width: 253px
+    @media (max-width: 575px)
+      max-width: 100%
   h1, .h1
     font-size: 18px
 
@@ -1706,6 +1713,9 @@ textarea
         height: 40px
       @media (max-width: 767px)
         width: 140px
+      @media (max-width: 575px)
+        width: 120px
+        margin-left: 5px
       .buttonText
         position: relative
         padding-left: 30px
@@ -1718,3 +1728,8 @@ textarea
           width: 20px
           height: 16px
           background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='16' viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.9375 6.53906H16.6172V4.09844C16.6172 3.71816 16.31 3.41094 15.9297 3.41094H9.16211L6.64199 1.00039C6.60993 0.970372 6.56775 0.953502 6.52383 0.953125H1.0625C0.682227 0.953125 0.375 1.26035 0.375 1.64062V14.3594C0.375 14.7396 0.682227 15.0469 1.0625 15.0469H16.0586C16.3379 15.0469 16.5914 14.8771 16.6967 14.6172L19.5756 7.48438C19.6078 7.40273 19.625 7.31465 19.625 7.22656C19.625 6.84629 19.3178 6.53906 18.9375 6.53906ZM15.0703 6.53906H4.11328C3.83398 6.53906 3.58047 6.70879 3.4752 6.96875L1.92188 10.8188V2.5H5.97168L8.54121 4.95781H15.0703V6.53906Z' fill='white'/%3e%3c/svg%3e ")
+
+
+
+.select2-dropdown
+  border: 1px solid #f5f7f9
