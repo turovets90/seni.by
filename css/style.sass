@@ -1320,7 +1320,7 @@ label
 .form-control
   font-size: 16px
   color: $black
-  background: $grey_light
+  background: #e8e8e8
   font-family: $Source_Sans_Pro
   height: 50px
   width: 100%
@@ -1645,7 +1645,8 @@ textarea
       padding: 15px
       text-align: center
   .sidebar_top
-    border-bottom: 4px solid #F5F7F9
+    @media (min-width: 768px)
+      border-bottom: 4px solid #F5F7F9
   .number
     color: $purple
     font-size: 24px
@@ -1658,7 +1659,9 @@ textarea
     &:last-of-type
       margin-bottom: 0
 
-
+.sidebar_bottom
+  @media (max-width: 767px)
+    display: none
 
 .sidebar_menu
   li
@@ -1733,3 +1736,8 @@ textarea
 
 .select2-dropdown
   border: 1px solid #f5f7f9
+
+
+.m_account_menu
+  @media (min-width: 768px)
+    display: none !important
